@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 //import './App.css'
 import Login from './page/Login';
+import Register from "./page/Register";
 import Dashboard from "./page/Dashboard";
 import Schedule from "./page/Reservation-schedule";
 import Report from './page/Report-page';
@@ -20,6 +21,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Login/>} />
         <Route path='/login' element={<Login/>}/>
+        <Route path='/login/register' element={<Register/>}/>
         <Route path='/dashboard/*' element={
           <ProtectedRoute isAuthenticated={lsAuthenticated}>
             <DashboardLayout/>

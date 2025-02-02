@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 const Schedule = () => {
     const [selectedDate, setSelectedDate] = useState('');
 
-    const handleChange = (event) => {
-      setSelectedDate(event.target.value);
+    const handleChange = (e) => {
+      setSelectedDate(e.target.value);
       console.log (selectedDate)
     };
   

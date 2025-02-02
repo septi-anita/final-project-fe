@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ProductList = ({products}) => {
+const ProductList = ({products, onDelete}) => {
   return (
     <>
-        <h2>ProductList</h2>
+        
         <ul className='grid grid-cols-5 gap-3'>
             {products.map((product)=>{
                 return(
@@ -13,6 +13,7 @@ const ProductList = ({products}) => {
                             <div>{product.title}</div>
                             <div>{product.price}</div>
                         </div>
+                        <button onClick={()=>onDelete(product.id)} className='border rounded bg-red-600 w-full text-white'>delete</button>
                     </li>
                 )
             })}
