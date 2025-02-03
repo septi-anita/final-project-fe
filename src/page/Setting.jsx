@@ -3,17 +3,17 @@ import axios from 'axios';
 import ProductList from '../component/Product/ProductList';
 import ProductForm from '../component/Product/ProductForm';
 
-const API_URL = 'http://172.16.148.101:8883/swagger/index.html#/ ';
+//const API_URL = 'http://172.16.148.101:8883/swagger/index.html#/ ';
 
 const Setting = () => {
-    /*
+    
     const [searchTitle, setSearchTitle] = useState('');
     const [searchPrice, setSearchPrice] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     const [products, setProducts] = useState ([]);
     const [selectedProduct, setSelectedProduct] = useState (null);
-    */
+    
 
     useEffect ( () => {
         axios.get(API_URL)
@@ -25,7 +25,7 @@ const Setting = () => {
             console.log ('error', err)
         })
     }, [])
-/*
+
     const handleSearch = () => {
         let filtered = products;
     
@@ -62,10 +62,10 @@ const Setting = () => {
             console.log('error',err)
         })
     }
-*/
+
     return(
         <>
-{/*          <div className="flex gap-2 mb-4">
+         <div className="flex gap-2 mb-4">
                 <input
                     type="text"
                     placeholder="Cari produk..."
@@ -100,7 +100,7 @@ const Setting = () => {
              />
 
           </div>
-*/}          
+          
         </>
     )
 
