@@ -3,7 +3,7 @@ import axios from 'axios';
 import ProductList from '../component/Product/ProductList';
 import ProductForm from '../component/Product/ProductForm';
 
-//const API_URL = 'http://172.16.148.101:8883/swagger/index.html#/ ';
+const API_URL = 'https://fakestoreapi.com/products';
 
 const Setting = () => {
     
@@ -19,7 +19,7 @@ const Setting = () => {
         axios.get(API_URL)
         .then(res =>{
             console.log('response',res)
-            //setProducts(res.data)
+            setProducts(res.data)
         })
         .catch (err => {
             console.log ('error', err)
