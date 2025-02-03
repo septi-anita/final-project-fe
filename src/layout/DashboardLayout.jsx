@@ -1,5 +1,6 @@
-import { NavLink, Outlet } from "react-router";
+import { NavLink, Outlet, useNavigate } from "react-router";
 import { useState } from "react"; 
+import { getToken } from "../utils/auth";
 import Logo from'../assets/images/Icon.png'
 import Arrow from'../assets/images/arrow-right.png'
 import Dashboard from'../assets/images/element-3.png'
@@ -10,8 +11,8 @@ import Setting from'../assets/images/setting-2.png'
 
 const DashboardLayout = () => {
     
+    
     const[pageTitle, setPage] = useState ("Dashboard")
-
         
     return (
        <div className="flex flex-row bg-slate-200">

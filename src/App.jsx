@@ -12,7 +12,8 @@ import DashboardLayout from "./layout/DashboardLayout";
 import ProtectedRoute from "./component/ProtectedRoute";
 
 const App = () => {
-  const lsAuthenticated=true;
+  
+  
 
   return (
     <>
@@ -23,7 +24,7 @@ const App = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/login/register' element={<Register/>}/>
         <Route path='/dashboard/*' element={
-          <ProtectedRoute isAuthenticated={lsAuthenticated}>
+          <ProtectedRoute>
             <DashboardLayout/>
           </ProtectedRoute>    
         }>
