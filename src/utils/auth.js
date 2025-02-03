@@ -19,7 +19,7 @@ export const getRefreshToken =() => Cookies.get(REFRESH_TOKEN);
 export const removeRefreshToken = () => Cookies.remove(REFRESH_TOKEN);
 
 export const httpService = axios.create({
-    baseURL: 'http://172.16.148.101:8881/api/v1'
+    baseURL: 'http://172.16.148.101:8883/api/v1'
 })
 
 httpService.interceptors.request.use((config)=>{
