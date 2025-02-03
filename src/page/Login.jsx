@@ -5,7 +5,7 @@ import { httpService, setToken, setRefreshToken } from "../utils/auth";
 
 const Login = () => {
   
-  const [username, setUserName] = useState ("");
+  const [email, setUserName] = useState ("");
   const [password, setPassword] = useState ("");
   
   const navigate = useNavigate(); 
@@ -14,7 +14,7 @@ const Login = () => {
     console.log("Check")
       
     const payload = {
-      username,
+      email,
       password
     }
     try {
@@ -43,11 +43,11 @@ const Login = () => {
             
               <label htmlFor="username" className=" text-start block text-sm font-medium text-gray-700">Username</label>
               <input 
-                type="username"
-                value={username} 
+                type="email"
+                value={email} 
                 id="username" 
                 name="username" 
-                placeholder="Username"
+                placeholder="email"
                 onChange={(e)=>setUserName(e.target.value)} 
                 className="mt-1 p-3 w-full border rounded-md" 
                 required
